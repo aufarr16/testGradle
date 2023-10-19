@@ -10,11 +10,11 @@ Buat proyek Gradle baru dengan menjalankan perintah "gradle init --type java-lib
 
 Buka file build.gradle di direktori root proyek dan tambahkan kode berikut untuk menentukan tugas khusus:
 
-tugas greetingTask(ketik: DefaultTask) {
-doLast {
-String name = project.hasProperty('name') ? project.property('name') : 'Gradle User'
-println "Hello, $name! Welcome to Gradle World!"
-}
+task greetingTask(type: DefaultTask) {
+    doLast {
+        String name = project.hasProperty('name') ? project.property('name') : 'Gradle User'
+        println "Hello, $name! Welcome to Gradle World!"
+    }
 }
 
 Anda dapat menjalankan tugas dengan menjalankan perintah berikut: "./gradlew greetingTask -Pname=YourName"
@@ -22,8 +22,8 @@ Anda dapat menjalankan tugas dengan menjalankan perintah berikut: "./gradlew gre
 Untuk menambahkan pustaka, Anda dapat menggunakan fitur manajemen dependensi bawaan Gradle. Untuk melakukannya, tambahkan kode berikut ke file build.gradle Anda:
 
 dependencies {
-implementation 'com.google.guava:guava:29.0-jre'
-testImplementation 'junit:junit:4.13'
+    implementation 'com.google.guava:guava:29.0-jre'
+    testImplementation 'junit:junit:4.13'
 }
 
 Terakhir, dorong proyek ke GitHub dengan membuat repositori baru dan menjalankan perintah berikut:
@@ -36,3 +36,4 @@ git push -u origin master
 
 ## Tujuan
 Membuat projek gradle sederhana
+Link untuk run greetingTask -> 
