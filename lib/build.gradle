@@ -45,7 +45,7 @@ java {
 
 task greetingTask(type: DefaultTask) {
     doLast {
-        String name = project.hasProperty('name') ? project.property('name') : 'Gradle User'
+        String name = ""+project.getProperty("args")+""
         println "Hello, $name! Welcome to Gradle World!"
     }
 }

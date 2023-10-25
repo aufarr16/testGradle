@@ -37,6 +37,6 @@ git push -u origin master
 ## Tujuan
 Membuat projek gradle sederhana
 
-Command: ./gradlew greetingTask -Pname=YourName <br/>
+Command: gradlew greetingTask -Pargs=User <br/>
 Hasil run: <br/>
 ![alt text](https://github.com/aufarr16/testGradle/blob/master/hasil%20run%20gradle%20project.png?raw=true)
